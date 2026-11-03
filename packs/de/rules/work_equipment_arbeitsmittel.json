@@ -1,0 +1,65 @@
+{
+  "id": "de.work_equipment.arbeitsmittel",
+  "category": "work_equipment",
+  "title": "Work equipment (Arbeitsmittel) and the 800 EUR immediate-deduction limit",
+  "tax_years": [
+    2025,
+    2026
+  ],
+  "summary": "Costs of work equipment are Werbungskosten. If the acquisition cost of a single item does not exceed 800 EUR excluding VAT, the whole cost (work share) can be deducted in the year of purchase. More expensive items are spread over their usual useful life. Computer hardware and software can be deducted fully in the year of purchase.",
+  "keywords": [
+    "laptop",
+    "equipment",
+    "arbeitsmittel",
+    "gwg",
+    "desk",
+    "monitor",
+    "chair",
+    "800",
+    "immediate",
+    "depreciation",
+    "afa",
+    "purchase",
+    "work equipment"
+  ],
+  "calc": {
+    "type": "immediate_vs_depreciation",
+    "immediate_limit": 800,
+    "currency": "EUR",
+    "limit_basis": "price excluding VAT (ELSTER Anleitung Anlage N 2025)"
+  },
+  "conditions": [
+    "The item is used for work; for mixed use only the work share is deductible",
+    "The 800 EUR limit applies per single item and is measured without VAT",
+    "Items above the limit are depreciated over the usual useful life",
+    "Computer hardware and software: see the one-year useful-life rule"
+  ],
+  "sources": [
+    {
+      "label": "§ 9 Abs. 1 Satz 3 Nr. 6 and 7 EStG",
+      "url": "https://www.gesetze-im-internet.de/estg/__9.html",
+      "kind": "statute"
+    },
+    {
+      "label": "§ 6 Abs. 2 EStG",
+      "url": "https://www.gesetze-im-internet.de/estg/__6.html",
+      "kind": "statute"
+    },
+    {
+      "label": "§ 9b Abs. 1 EStG",
+      "url": "https://www.gesetze-im-internet.de/estg/__9b.html",
+      "kind": "statute"
+    },
+    {
+      "label": "ELSTER Anleitung 2025, Anlage N, Zeilen 49 bis 51",
+      "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025#c9718",
+      "kind": "official_guidance"
+    }
+  ],
+  "verification": "verified",
+  "notes": "The official ELSTER 2025 instructions state that work equipment costing at most 800 EUR 'ohne Umsatzsteuer' can be deducted in full in the year of purchase. An earlier reading of § 9b EStG suggested a gross limit; the official administrative guidance (net) is followed. The deduction itself is the full price paid including VAT, because an employee cannot reclaim input VAT.",
+  "open_questions": [
+    "Depreciation over the useful life for items above the limit is not computed: the pack has no useful-life table (AfA-Tabelle). Those items are returned as needs_review."
+  ],
+  "last_verified": "2026-11-02"
+}

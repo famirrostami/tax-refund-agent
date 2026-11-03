@@ -1,0 +1,419 @@
+[
+  {
+    "id": "home_120_days",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.home_office.tagespauschale",
+    "facts": {
+      "days": 120,
+      "arbeitszimmerClaimed": false
+    },
+    "expected": {
+      "verdict": "deductible",
+      "amount": 720,
+      "confidence": "high",
+      "missing": [],
+      "ok": true
+    }
+  },
+  {
+    "id": "home_capped_at_1260",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.home_office.tagespauschale",
+    "facts": {
+      "days": 250
+    },
+    "expected": {
+      "verdict": "deductible",
+      "amount": 1260,
+      "ok": true
+    }
+  },
+  {
+    "id": "home_excluded_with_work_room",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.home_office.tagespauschale",
+    "facts": {
+      "days": 100,
+      "arbeitszimmerClaimed": true
+    },
+    "expected": {
+      "verdict": "not_deductible",
+      "amount": 0,
+      "ok": true
+    }
+  },
+  {
+    "id": "home_days_unknown",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.home_office.tagespauschale",
+    "facts": {},
+    "expected": {
+      "verdict": "needs_review",
+      "amount": null,
+      "confidence": "low",
+      "missing": [
+        "days"
+      ],
+      "ok": true
+    }
+  },
+  {
+    "id": "commute_2025_tiered",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.commute.entfernungspauschale.2025",
+    "facts": {
+      "oneWayKm": 30,
+      "workingDays": 200
+    },
+    "expected": {
+      "verdict": "deductible",
+      "amount": 1960,
+      "ok": true
+    }
+  },
+  {
+    "id": "commute_2026_flat_rate",
+    "suite": "check",
+    "year": 2026,
+    "ruleId": "de.commute.entfernungspauschale.2026",
+    "facts": {
+      "oneWayKm": 30,
+      "workingDays": 200
+    },
+    "expected": {
+      "verdict": "deductible",
+      "amount": 2280,
+      "ok": true
+    }
+  },
+  {
+    "id": "commute_cap_car_unknown",
+    "suite": "check",
+    "year": 2026,
+    "ruleId": "de.commute.entfernungspauschale.2026",
+    "facts": {
+      "oneWayKm": 100,
+      "workingDays": 220
+    },
+    "expected": {
+      "verdict": "deductible",
+      "amount": 4500,
+      "confidence": "low",
+      "missing": [
+        "usesOwnOrProvidedCar"
+      ],
+      "ok": true
+    }
+  },
+  {
+    "id": "commute_cap_waived_with_car",
+    "suite": "check",
+    "year": 2026,
+    "ruleId": "de.commute.entfernungspauschale.2026",
+    "facts": {
+      "oneWayKm": 100,
+      "workingDays": 220,
+      "usesOwnOrProvidedCar": true
+    },
+    "expected": {
+      "verdict": "deductible",
+      "amount": 8360,
+      "ok": true
+    }
+  },
+  {
+    "id": "equipment_within_limit_work_share",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.work_equipment.arbeitsmittel",
+    "facts": {
+      "grossAmount": 500,
+      "workUsePercent": 80
+    },
+    "expected": {
+      "verdict": "deductible",
+      "amount": 400,
+      "confidence": "high",
+      "ok": true
+    }
+  },
+  {
+    "id": "equipment_computer_above_limit",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.work_equipment.arbeitsmittel",
+    "facts": {
+      "grossAmount": 1500,
+      "workUsePercent": 100,
+      "isComputerOrSoftware": true
+    },
+    "expected": {
+      "verdict": "deductible",
+      "amount": 1500,
+      "confidence": "high",
+      "ok": true
+    }
+  },
+  {
+    "id": "equipment_limit_is_net_of_vat",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.work_equipment.arbeitsmittel",
+    "facts": {
+      "grossAmount": 900,
+      "workUsePercent": 100,
+      "isComputerOrSoftware": false,
+      "vatRatePercent": 19
+    },
+    "expected": {
+      "ok": true,
+      "verdict": "deductible",
+      "amount": 900,
+      "confidence": "high"
+    },
+    "description": "900 EUR gross at 19% VAT is 756.30 net, within the 800 EUR limit (ELSTER Anleitung 2025: limit is without VAT)"
+  },
+  {
+    "id": "equipment_depreciation_needs_review",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.work_equipment.arbeitsmittel",
+    "facts": {
+      "grossAmount": 2400,
+      "workUsePercent": 100,
+      "isComputerOrSoftware": false,
+      "vatRatePercent": 19
+    },
+    "expected": {
+      "verdict": "needs_review",
+      "amount": null,
+      "ok": true
+    }
+  },
+  {
+    "id": "equipment_private_use",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.work_equipment.arbeitsmittel",
+    "facts": {
+      "grossAmount": 500,
+      "workUsePercent": 0
+    },
+    "expected": {
+      "verdict": "not_deductible",
+      "amount": 0,
+      "ok": true
+    }
+  },
+  {
+    "id": "equipment_asks_in_order",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.work_equipment.arbeitsmittel",
+    "facts": {
+      "grossAmount": 1000,
+      "workUsePercent": 100
+    },
+    "expected": {
+      "verdict": "needs_review",
+      "missing": [
+        "isComputerOrSoftware"
+      ],
+      "ok": true
+    }
+  },
+  {
+    "id": "work_room_partial_year_unconfirmed",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.home_office.arbeitszimmer_jahrespauschale",
+    "facts": {
+      "qualifyingMonths": 6
+    },
+    "expected": {
+      "verdict": "needs_review",
+      "amount": 630,
+      "ok": true
+    }
+  },
+  {
+    "id": "donation_capped_by_income",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.other.spenden",
+    "facts": {
+      "donationAmount": 5000,
+      "totalIncome": 20000,
+      "recipientEligible": true
+    },
+    "expected": {
+      "verdict": "deductible",
+      "amount": 4000,
+      "ok": true
+    }
+  },
+  {
+    "id": "allowance_excess_helps",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.general.arbeitnehmer_pauschbetrag",
+    "facts": {
+      "totalWerbungskosten": 1500
+    },
+    "expected": {
+      "verdict": "deductible",
+      "amount": 270,
+      "confidence": "high",
+      "ok": true
+    }
+  },
+  {
+    "id": "allowance_not_exceeded",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.general.arbeitnehmer_pauschbetrag",
+    "facts": {
+      "totalWerbungskosten": 900
+    },
+    "expected": {
+      "verdict": "not_deductible",
+      "amount": 0,
+      "ok": true
+    }
+  },
+  {
+    "id": "union_dues_2026",
+    "suite": "check",
+    "year": 2026,
+    "ruleId": "de.other.gewerkschaftsbeitraege.2026",
+    "facts": {
+      "amount": 240
+    },
+    "expected": {
+      "verdict": "deductible",
+      "amount": 240,
+      "confidence": "high",
+      "ok": true
+    }
+  },
+  {
+    "id": "refuses_rule_from_other_year",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.commute.entfernungspauschale.2026",
+    "facts": {
+      "oneWayKm": 10,
+      "workingDays": 10
+    },
+    "expected": {
+      "ok": false,
+      "code": "rule_not_for_year"
+    }
+  },
+  {
+    "id": "refuses_unknown_rule",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.made.up",
+    "facts": {},
+    "expected": {
+      "ok": false,
+      "code": "rule_not_found"
+    }
+  },
+  {
+    "id": "refuses_invalid_facts",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.home_office.tagespauschale",
+    "facts": {
+      "days": "many"
+    },
+    "expected": {
+      "ok": false,
+      "code": "invalid_facts"
+    }
+  },
+  {
+    "id": "refuses_supporting_rule",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.work_equipment.computer_nutzungsdauer",
+    "facts": {},
+    "expected": {
+      "ok": false,
+      "code": "no_calculator"
+    }
+  },
+  {
+    "id": "home_asks_about_work_room",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.home_office.tagespauschale",
+    "facts": {
+      "days": 120
+    },
+    "expected": {
+      "ok": true,
+      "verdict": "deductible",
+      "amount": 720,
+      "confidence": "low",
+      "missing": [
+        "arbeitszimmerClaimed"
+      ]
+    }
+  },
+  {
+    "id": "equipment_net_above_limit_needs_depreciation",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.work_equipment.arbeitsmittel",
+    "facts": {
+      "grossAmount": 1000,
+      "workUsePercent": 100,
+      "isComputerOrSoftware": false,
+      "vatRatePercent": 19
+    },
+    "expected": {
+      "ok": true,
+      "verdict": "needs_review",
+      "amount": null
+    }
+  },
+  {
+    "id": "home_split_days_valid",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.home_office.tagespauschale",
+    "facts": {
+      "days": 100,
+      "daysAlsoAtFirstWorkplace": 20,
+      "arbeitszimmerClaimed": false
+    },
+    "expected": {
+      "ok": true,
+      "verdict": "deductible",
+      "amount": 600,
+      "confidence": "high"
+    }
+  },
+  {
+    "id": "home_split_days_exceeding_total_rejected",
+    "suite": "check",
+    "year": 2025,
+    "ruleId": "de.home_office.tagespauschale",
+    "facts": {
+      "days": 10,
+      "daysAlsoAtFirstWorkplace": 11
+    },
+    "expected": {
+      "ok": false,
+      "code": "invalid_facts"
+    }
+  }
+]

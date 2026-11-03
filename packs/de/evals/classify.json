@@ -1,0 +1,272 @@
+[
+  {
+    "id": "classify_laptop",
+    "suite": "classify",
+    "year": 2025,
+    "receipt": {
+      "vendor": "MediaMarkt",
+      "date": "2025-03-14",
+      "description": "Laptop 14 inch",
+      "lineItems": [
+        {
+          "description": "Laptop 14 inch",
+          "amount": 899
+        }
+      ],
+      "totalAmount": 899,
+      "currency": "EUR",
+      "documentType": "invoice"
+    },
+    "expected": {
+      "category": "work_equipment",
+      "taxYearMatches": true
+    }
+  },
+  {
+    "id": "classify_office_chair",
+    "suite": "classify",
+    "year": 2025,
+    "receipt": {
+      "vendor": "IKEA",
+      "date": "2025-05-10",
+      "description": "Ergonomic office chair",
+      "lineItems": [
+        {
+          "description": "Ergonomic office chair",
+          "amount": 249
+        }
+      ],
+      "totalAmount": 249,
+      "currency": "EUR",
+      "documentType": "receipt"
+    },
+    "expected": {
+      "category": "work_equipment"
+    },
+    "userNote": "for my work"
+  },
+  {
+    "id": "classify_standing_desk_home_office",
+    "suite": "classify",
+    "year": 2025,
+    "receipt": {
+      "vendor": "Desky",
+      "date": "2025-05-10",
+      "description": "Standing desk",
+      "lineItems": [
+        {
+          "description": "Standing desk",
+          "amount": 420
+        }
+      ],
+      "totalAmount": 420,
+      "currency": "EUR",
+      "documentType": "receipt"
+    },
+    "expected": {
+      "category": "work_equipment"
+    },
+    "userNote": "for my home office"
+  },
+  {
+    "id": "classify_groceries",
+    "suite": "classify",
+    "year": 2025,
+    "receipt": {
+      "vendor": "REWE",
+      "date": "2025-05-10",
+      "description": "Groceries",
+      "lineItems": [
+        {
+          "description": "Groceries",
+          "amount": 63.4
+        }
+      ],
+      "totalAmount": 63.4,
+      "currency": "EUR",
+      "documentType": "receipt"
+    },
+    "expected": {
+      "category": "not_work_related"
+    }
+  },
+  {
+    "id": "classify_streaming",
+    "suite": "classify",
+    "year": 2025,
+    "receipt": {
+      "vendor": "Netflix",
+      "date": "2025-05-10",
+      "description": "Monthly subscription",
+      "lineItems": [
+        {
+          "description": "Monthly subscription",
+          "amount": 13.99
+        }
+      ],
+      "totalAmount": 13.99,
+      "currency": "EUR",
+      "documentType": "receipt"
+    },
+    "expected": {
+      "category": "not_work_related"
+    }
+  },
+  {
+    "id": "classify_restaurant",
+    "suite": "classify",
+    "year": 2025,
+    "receipt": {
+      "vendor": "Trattoria Roma",
+      "date": "2025-05-10",
+      "description": "Dinner for two",
+      "lineItems": [
+        {
+          "description": "Dinner for two",
+          "amount": 74.5
+        }
+      ],
+      "totalAmount": 74.5,
+      "currency": "EUR",
+      "documentType": "receipt"
+    },
+    "expected": {
+      "category": "not_work_related"
+    }
+  },
+  {
+    "id": "classify_union_fee",
+    "suite": "classify",
+    "year": 2025,
+    "receipt": {
+      "vendor": "ver.di",
+      "date": "2025-01-15",
+      "description": "Annual membership fee",
+      "lineItems": [
+        {
+          "description": "Annual membership fee",
+          "amount": 240
+        }
+      ],
+      "totalAmount": 240,
+      "currency": "EUR",
+      "documentType": "invoice"
+    },
+    "expected": {
+      "category": "other"
+    }
+  },
+  {
+    "id": "classify_donation",
+    "suite": "classify",
+    "year": 2025,
+    "receipt": {
+      "vendor": "Red Cross",
+      "date": "2025-12-01",
+      "description": "Donation",
+      "lineItems": [
+        {
+          "description": "Donation",
+          "amount": 150
+        }
+      ],
+      "totalAmount": 150,
+      "currency": "EUR",
+      "documentType": "receipt"
+    },
+    "expected": {
+      "category": "other"
+    }
+  },
+  {
+    "id": "classify_training",
+    "suite": "classify",
+    "year": 2025,
+    "receipt": {
+      "vendor": "Udemy",
+      "date": "2025-06-02",
+      "description": "Online course: project management",
+      "lineItems": [
+        {
+          "description": "Online course: project management",
+          "amount": 89.99
+        }
+      ],
+      "totalAmount": 89.99,
+      "currency": "EUR",
+      "documentType": "invoice"
+    },
+    "expected": {
+      "category": "other"
+    },
+    "userNote": "job-related training"
+  },
+  {
+    "id": "classify_commute_ticket",
+    "suite": "classify",
+    "year": 2025,
+    "receipt": {
+      "vendor": "Deutsche Bahn",
+      "date": "2025-04-01",
+      "description": "Monthly commuter pass",
+      "lineItems": [
+        {
+          "description": "Monthly commuter pass",
+          "amount": 58
+        }
+      ],
+      "totalAmount": 58,
+      "currency": "EUR",
+      "documentType": "receipt"
+    },
+    "expected": {
+      "category": "commute"
+    },
+    "userNote": "to get to my office"
+  },
+  {
+    "id": "classify_unclear_order",
+    "suite": "classify",
+    "year": 2025,
+    "receipt": {
+      "vendor": "Amazon",
+      "date": "2025-05-10",
+      "description": "Order",
+      "lineItems": [
+        {
+          "description": "Order",
+          "amount": 42.0
+        }
+      ],
+      "totalAmount": 42.0,
+      "currency": "EUR",
+      "documentType": "receipt"
+    },
+    "expected": {
+      "category": "unclear"
+    }
+  },
+  {
+    "id": "classify_other_year_flagged",
+    "suite": "classify",
+    "year": 2025,
+    "receipt": {
+      "vendor": "MediaMarkt",
+      "date": "2024-03-14",
+      "description": "Laptop",
+      "lineItems": [
+        {
+          "description": "Laptop",
+          "amount": 899
+        }
+      ],
+      "totalAmount": 899,
+      "currency": "EUR",
+      "documentType": "invoice"
+    },
+    "expected": {
+      "category": "work_equipment",
+      "taxYearMatches": false
+    }
+  }
+]

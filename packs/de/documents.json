@@ -1,0 +1,223 @@
+{
+  "based_on_year": 2025,
+  "last_verified": "2026-11-02",
+  "notes": "Upload and retention guidance is taken from the ELSTER 2025 instructions and is reused for later years until new instructions are read. Items marked official=false are practical recommendations by this app, not ELSTER requirements.",
+  "general": {
+    "keep": {
+      "id": "keep_receipts",
+      "kind": "document",
+      "text": "Keep all receipts and documents. You do not have to send them with the return; send them only if the form says so or the tax office asks.",
+      "official": true,
+      "source": {
+        "label": "ELSTER Anleitung 2025, Hauptvordruck: Belegvorhaltepflicht",
+        "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025"
+      }
+    },
+    "upload_steps": [
+      {
+        "text": "Documents you already have digitally (for example PDFs): upload them in Mein ELSTER under \"Meine Belege\".",
+        "source": {
+          "label": "ELSTER Anleitung 2025, Hauptvordruck: Belegvorhaltepflicht",
+          "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025"
+        }
+      },
+      {
+        "text": "Paper documents: photograph them with the MeinELSTER+ app and upload them to your account.",
+        "source": {
+          "label": "ELSTER Anleitung 2025, Hauptvordruck: Belegvorhaltepflicht",
+          "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025"
+        }
+      },
+      {
+        "text": "While filling in the return, link the uploaded documents to the matching input fields, so the tax office can retrieve them itself.",
+        "source": {
+          "label": "ELSTER Anleitung 2025, Hauptvordruck: Belegvorhaltepflicht",
+          "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025"
+        }
+      },
+      {
+        "text": "If the tax office asks for documents, send them digitally with the form \"Belegnachreichung\" in Mein ELSTER.",
+        "source": {
+          "label": "ELSTER Anleitung 2025, Hauptvordruck: Belegvorhaltepflicht",
+          "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025"
+        }
+      },
+      {
+        "text": "If you ever send paper: send copies only, never originals.",
+        "source": {
+          "label": "ELSTER Anleitung 2025, Hauptvordruck: Belegvorhaltepflicht",
+          "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025"
+        }
+      }
+    ]
+  },
+  "by_rule": {
+    "de.other.spenden": [
+      {
+        "id": "donation_receipt",
+        "kind": "document",
+        "text": "Donation receipt (Zuwendungsbestätigung) from the recipient. For payments up to 300 EUR each to a public body, a payment slip or bank statement is enough. For clubs and foundations the receipt must state the exemption from corporate tax, how the funds are used, and whether it is a donation or a membership fee.",
+        "official": true,
+        "why": "Needed on request of the tax office.",
+        "source": {
+          "label": "ELSTER Anleitung 2025, Anlage Sonderausgaben, Zeilen 5 bis 12",
+          "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025#c0817"
+        }
+      },
+      {
+        "id": "donation_retention",
+        "kind": "information",
+        "text": "Keep donation receipts until one year after the tax notice is issued, or for the periods in § 147 AO.",
+        "official": true,
+        "source": {
+          "label": "ELSTER Anleitung 2025, Anlage Sonderausgaben, Zeilen 5 bis 12",
+          "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025#c0817"
+        }
+      }
+    ],
+    "de.commute.entfernungspauschale.2025": [
+      {
+        "id": "commute_workplace",
+        "kind": "information",
+        "text": "Name and address of the first place of work (Anlage N, line 32).",
+        "official": true,
+        "source": {
+          "label": "ELSTER Anleitung 2025, Anlage N",
+          "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025#c9718"
+        }
+      },
+      {
+        "id": "commute_days",
+        "kind": "information",
+        "text": "Number of days you went to the first place of work (line 34). Days of sickness, holiday, business trips and home working do not count.",
+        "official": true,
+        "source": {
+          "label": "ELSTER Anleitung 2025, Anlage N",
+          "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025#c9718"
+        }
+      },
+      {
+        "id": "commute_vehicle",
+        "kind": "information",
+        "text": "Whether you used your own or a provided car, or other transport (decides the km field).",
+        "official": true,
+        "source": {
+          "label": "ELSTER Anleitung 2025, Anlage N",
+          "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025#c9718"
+        }
+      },
+      {
+        "id": "commute_ticket",
+        "kind": "document",
+        "text": "Season ticket or ticket receipts, if your actual public-transport costs are higher than the allowance (line 39).",
+        "official": false,
+        "why": "Recommended, not required by ELSTER"
+      }
+    ],
+    "de.commute.entfernungspauschale.2026": [
+      {
+        "id": "commute_workplace",
+        "kind": "information",
+        "text": "Name and address of the first place of work.",
+        "official": true,
+        "source": {
+          "label": "ELSTER Anleitung 2025, Anlage N",
+          "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025#c9718"
+        }
+      },
+      {
+        "id": "commute_days",
+        "kind": "information",
+        "text": "Number of days you went to the first place of work. Days of sickness, holiday, business trips and home working do not count.",
+        "official": true,
+        "source": {
+          "label": "ELSTER Anleitung 2025, Anlage N",
+          "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025#c9718"
+        }
+      },
+      {
+        "id": "commute_vehicle",
+        "kind": "information",
+        "text": "Whether you used your own or a provided car, or other transport (decides the km field).",
+        "official": true,
+        "source": {
+          "label": "ELSTER Anleitung 2025, Anlage N",
+          "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025#c9718"
+        }
+      },
+      {
+        "id": "commute_ticket",
+        "kind": "document",
+        "text": "Season ticket or ticket receipts, if your actual public-transport costs are higher than the allowance.",
+        "official": false,
+        "why": "Recommended, not required by ELSTER"
+      }
+    ],
+    "de.home_office.tagespauschale": [
+      {
+        "id": "homeoffice_days",
+        "kind": "information",
+        "text": "Number of days you worked at home without going to the first place of work (line 53), and separately the days you worked at home and also went to the first place of work because you had no other permanent workplace (line 54).",
+        "official": true,
+        "source": {
+          "label": "ELSTER Anleitung 2025, Anlage N",
+          "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025#c9718"
+        }
+      },
+      {
+        "id": "homeoffice_log",
+        "kind": "document",
+        "text": "A calendar or log of your home-office days.",
+        "official": false,
+        "why": "Recommended, not required by ELSTER; it helps if the tax office asks."
+      }
+    ],
+    "de.home_office.arbeitszimmer_jahrespauschale": [
+      {
+        "id": "room_centre",
+        "kind": "information",
+        "text": "Confirmation that the work room is the centre of your whole professional activity, and in which months.",
+        "official": true,
+        "source": {
+          "label": "ELSTER Anleitung 2025, Anlage N",
+          "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025#c9718"
+        }
+      },
+      {
+        "id": "room_costs",
+        "kind": "document",
+        "text": "Rent, interest, utilities and similar costs, if you claim actual costs instead of the flat amount, and the room's share of the home.",
+        "official": false,
+        "why": "Recommended, not required by ELSTER"
+      }
+    ],
+    "de.work_equipment.arbeitsmittel": [
+      {
+        "id": "equipment_invoice",
+        "kind": "document",
+        "text": "Invoice or receipt for each item, showing price, VAT and date.",
+        "official": false,
+        "why": "Recommended, not required by ELSTER; the tax office may ask for it."
+      },
+      {
+        "id": "equipment_work_share",
+        "kind": "information",
+        "text": "Share of work use for each item (for mixed use only the work share counts).",
+        "official": true,
+        "source": {
+          "label": "ELSTER Anleitung 2025, Anlage N",
+          "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025#c9718"
+        }
+      }
+    ],
+    "de.other.gewerkschaftsbeitraege.2026": [
+      {
+        "id": "union_statement",
+        "kind": "document",
+        "text": "Annual statement of your membership fees.",
+        "official": false,
+        "why": "Recommended, not required by ELSTER"
+      }
+    ]
+  }
+}

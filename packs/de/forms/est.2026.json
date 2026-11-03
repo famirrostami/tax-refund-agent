@@ -1,0 +1,12 @@
+{
+  "tax_year": 2026,
+  "status": "pending",
+  "extends": 2025,
+  "source": {
+    "label": "No official 2026 form or instructions published yet; labels carried over from 2025",
+    "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025",
+    "kind": "official_guidance"
+  },
+  "last_verified": "2026-11-02",
+  "notes": "Line numbers for tax year 2026 are not published yet (the forms appear around the turn of the year). Field labels are carried over from 2025; lines are withheld."
+}

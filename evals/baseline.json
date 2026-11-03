@@ -1,0 +1,49 @@
+{
+  "updated": "2026-11-02",
+  "suites": {
+    "check": {
+      "passing": [
+        "allowance_excess_helps",
+        "allowance_not_exceeded",
+        "commute_2025_tiered",
+        "commute_2026_flat_rate",
+        "commute_cap_car_unknown",
+        "commute_cap_waived_with_car",
+        "donation_capped_by_income",
+        "equipment_asks_in_order",
+        "equipment_computer_above_limit",
+        "equipment_depreciation_needs_review",
+        "equipment_limit_is_net_of_vat",
+        "equipment_net_above_limit_needs_depreciation",
+        "equipment_private_use",
+        "equipment_within_limit_work_share",
+        "home_120_days",
+        "home_asks_about_work_room",
+        "home_capped_at_1260",
+        "home_days_unknown",
+        "home_excluded_with_work_room",
+        "home_split_days_exceeding_total_rejected",
+        "home_split_days_valid",
+        "refuses_invalid_facts",
+        "refuses_rule_from_other_year",
+        "refuses_supporting_rule",
+        "refuses_unknown_rule",
+        "union_dues_2026",
+        "work_room_partial_year_unconfirmed"
+      ]
+    },
+    "search": {
+      "passing": [
+        "search_allowance",
+        "search_commute_2025",
+        "search_commute_2026",
+        "search_donation",
+        "search_home_office",
+        "search_laptop",
+        "search_nonsense_returns_nothing",
+        "search_union_2026",
+        "search_union_not_in_2025"
+      ]
+    }
+  }
+}

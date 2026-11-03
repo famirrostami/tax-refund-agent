@@ -1,0 +1,44 @@
+{
+  "id": "de.general.arbeitnehmer_pauschbetrag",
+  "category": "other",
+  "title": "Arbeitnehmer-Pauschbetrag (standard employee allowance)",
+  "tax_years": [
+    2025,
+    2026
+  ],
+  "summary": "Employees automatically get a standard allowance of 1,230 EUR for work-related costs (Werbungskosten). Individual costs only reduce tax if the total of all Werbungskosten exceeds this amount.",
+  "keywords": [
+    "pauschbetrag",
+    "allowance",
+    "werbungskosten",
+    "standard",
+    "threshold",
+    "1230",
+    "employee",
+    "total"
+  ],
+  "calc": {
+    "type": "standard_allowance",
+    "amount": 1230,
+    "currency": "EUR"
+  },
+  "conditions": [
+    "Applies to income from employment (§ 9a Satz 1 Nr. 1 a EStG)"
+  ],
+  "sources": [
+    {
+      "label": "§ 9a EStG",
+      "url": "https://www.gesetze-im-internet.de/estg/__9a.html",
+      "kind": "statute"
+    },
+    {
+      "label": "ELSTER Anleitung 2025, Anlage N, Werbungskosten (Zeilen 32 bis 72)",
+      "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025#c9718",
+      "kind": "official_guidance"
+    }
+  ],
+  "verification": "verified",
+  "notes": "A planned increase from 2027 is not law and is not encoded.",
+  "last_verified": "2026-11-02",
+  "open_questions": []
+}

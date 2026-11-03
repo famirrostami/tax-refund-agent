@@ -1,0 +1,88 @@
+[
+  {
+    "id": "search_home_office",
+    "suite": "search",
+    "year": 2025,
+    "query": "working from home days",
+    "expected": {
+      "top": "de.home_office.tagespauschale"
+    }
+  },
+  {
+    "id": "search_commute_2025",
+    "suite": "search",
+    "year": 2025,
+    "query": "commute distance km",
+    "expected": {
+      "top": "de.commute.entfernungspauschale.2025"
+    }
+  },
+  {
+    "id": "search_commute_2026",
+    "suite": "search",
+    "year": 2026,
+    "query": "commute distance km",
+    "expected": {
+      "top": "de.commute.entfernungspauschale.2026"
+    }
+  },
+  {
+    "id": "search_laptop",
+    "suite": "search",
+    "year": 2025,
+    "query": "laptop",
+    "expected": {
+      "includes": [
+        "de.work_equipment.arbeitsmittel",
+        "de.work_equipment.computer_nutzungsdauer"
+      ]
+    }
+  },
+  {
+    "id": "search_union_not_in_2025",
+    "suite": "search",
+    "year": 2025,
+    "query": "union membership fee",
+    "expected": {
+      "excludes": [
+        "de.other.gewerkschaftsbeitraege.2026"
+      ]
+    }
+  },
+  {
+    "id": "search_union_2026",
+    "suite": "search",
+    "year": 2026,
+    "query": "union membership fee",
+    "expected": {
+      "top": "de.other.gewerkschaftsbeitraege.2026"
+    }
+  },
+  {
+    "id": "search_donation",
+    "suite": "search",
+    "year": 2025,
+    "query": "donation to charity",
+    "expected": {
+      "top": "de.other.spenden"
+    }
+  },
+  {
+    "id": "search_allowance",
+    "suite": "search",
+    "year": 2025,
+    "query": "standard allowance werbungskosten",
+    "expected": {
+      "top": "de.general.arbeitnehmer_pauschbetrag"
+    }
+  },
+  {
+    "id": "search_nonsense_returns_nothing",
+    "suite": "search",
+    "year": 2025,
+    "query": "zebra",
+    "expected": {
+      "empty": true
+    }
+  }
+]

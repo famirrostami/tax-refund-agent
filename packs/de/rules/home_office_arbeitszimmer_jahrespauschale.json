@@ -1,0 +1,48 @@
+{
+  "id": "de.home_office.arbeitszimmer_jahrespauschale",
+  "category": "home_office",
+  "title": "Arbeitszimmer annual flat amount",
+  "tax_years": [
+    2025,
+    2026
+  ],
+  "summary": "Instead of actual costs, a flat 1,260 EUR per calendar year can be deducted for a work room (Arbeitszimmer). The amount reduces by one twelfth for each full calendar month in which the conditions are not met. It cannot be combined with the Tagespauschale for the same period.",
+  "keywords": [
+    "home office",
+    "arbeitszimmer",
+    "room",
+    "study",
+    "jahrespauschale",
+    "dedicated room",
+    "office room"
+  ],
+  "calc": {
+    "type": "flat_allowance",
+    "amount": 1260,
+    "currency": "EUR",
+    "months_in_year": 12
+  },
+  "conditions": [
+    "The work room is the centre (Mittelpunkt) of the whole professional activity",
+    "Either actual costs or the annual flat amount can be claimed, not both",
+    "The annual flat amount is reduced by one twelfth for each full calendar month in which the conditions are not met",
+    "If the room is not the centre of the activity, the daily home-office flat rate may be claimed instead",
+    "Equipment in the room (desk, computer) is work equipment, not part of the room costs"
+  ],
+  "sources": [
+    {
+      "label": "§ 4 Abs. 5 Satz 1 Nr. 6b EStG",
+      "url": "https://www.gesetze-im-internet.de/estg/__4.html",
+      "kind": "statute"
+    },
+    {
+      "label": "ELSTER Anleitung 2025, Anlage N, Zeile 52",
+      "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025#c9718",
+      "kind": "official_guidance"
+    }
+  ],
+  "verification": "verified",
+  "notes": "Conditions taken from the ELSTER 2025 instructions (Zeile 52) and the BMF letter of 15 August 2023 it cites.",
+  "open_questions": [],
+  "last_verified": "2026-11-02"
+}

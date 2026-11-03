@@ -1,0 +1,52 @@
+[
+  {
+    "id": "home_office",
+    "labelKey": "category.home_office",
+    "requiredDocs": [
+      "Employer confirmation or work contract (if available)",
+      "Calendar or log of home-office days"
+    ],
+    "questions": [
+      "On how many days did you work from home in this tax year?",
+      "Do you have a dedicated room used almost only for work?"
+    ],
+    "description": "Costs of working from home: days worked at home, a dedicated work room (Arbeitszimmer), and home-office running costs. Not equipment purchases (those are work_equipment)."
+  },
+  {
+    "id": "work_equipment",
+    "labelKey": "category.work_equipment",
+    "requiredDocs": [
+      "Invoice or receipt with purchase date and amount",
+      "Proof of payment"
+    ],
+    "questions": [
+      "What share of the use is for work?",
+      "On what date was it bought?"
+    ],
+    "description": "Items bought mainly for work: laptop, computer, monitor, keyboard, desk, office chair, software, tools, work clothing, professional books."
+  },
+  {
+    "id": "commute",
+    "labelKey": "category.commute",
+    "requiredDocs": [
+      "Address of home and workplace",
+      "Number of working days at the workplace"
+    ],
+    "questions": [
+      "What is the one-way distance to work in km?",
+      "How many days did you commute?"
+    ],
+    "description": "Travel between home and the regular workplace: distance, working days, fuel or public-transport tickets for the daily commute."
+  },
+  {
+    "id": "other",
+    "labelKey": "category.other",
+    "requiredDocs": [
+      "Receipt, invoice or donation receipt"
+    ],
+    "questions": [
+      "What was the expense for, and how is it connected to your income?"
+    ],
+    "description": "Other possibly deductible items for an employee: union fees, courses and training, donations, health costs, job-application costs, and similar."
+  }
+]

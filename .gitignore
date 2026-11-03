@@ -1,0 +1,8 @@
+node_modules
+dist
+.env
+data
+evals/results
+.DS_Store
+
+.superpowers/

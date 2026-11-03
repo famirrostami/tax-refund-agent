@@ -1,0 +1,221 @@
+{
+  "tax_year": 2025,
+  "status": "published",
+  "source": {
+    "label": "ELSTER Anleitung zur Einkommensteuererklärung 2025 (Anlage N, Anlage Sonderausgaben)",
+    "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025",
+    "kind": "official_guidance"
+  },
+  "last_verified": "2026-11-02",
+  "notes": "Line numbers read from the official ELSTER 2025 instructions. The official form PDF itself was not retrieved; verify on screen before submitting.",
+  "fields": [
+    {
+      "id": "commute_days",
+      "form": "Anlage N",
+      "section": "Wege zwischen Wohnung und erster Tätigkeitsstätte",
+      "line": "34",
+      "labelDe": "Anzahl der Arbeitstage",
+      "labelEn": "Working days at the first place of work",
+      "unit": "days",
+      "verification": "verified",
+      "note": "Second employer or job change: use the second entry from line 40."
+    },
+    {
+      "id": "commute_km_car",
+      "form": "Anlage N",
+      "section": "Wege zwischen Wohnung und erster Tätigkeitsstätte",
+      "line": "36",
+      "labelDe": "Entfernungskilometer (Pkw)",
+      "labelEn": "One-way distance in km, own or provided car",
+      "unit": "km",
+      "verification": "verified",
+      "note": "Line 35 also relates to days with the own car (see the car-pool instructions); check the on-screen field labels."
+    },
+    {
+      "id": "commute_km_other",
+      "form": "Anlage N",
+      "section": "Wege zwischen Wohnung und erster Tätigkeitsstätte",
+      "line": "37-38",
+      "labelDe": "Entfernungskilometer (andere Verkehrsmittel)",
+      "labelEn": "One-way distance in km, other means of transport",
+      "unit": "km",
+      "verification": "verified",
+      "note": "ELSTER says the remaining kilometres go in lines 37 and/or 38; use the field that matches the means of transport. Actual public-transport costs, if higher, go in line 39."
+    },
+    {
+      "id": "work_equipment_amount",
+      "form": "Anlage N",
+      "section": "Aufwendungen für Arbeitsmittel",
+      "line": "49-51",
+      "labelDe": "Aufwendungen für Arbeitsmittel",
+      "labelEn": "Work equipment costs (work share)",
+      "unit": "EUR",
+      "verification": "verified",
+      "note": "Describe the item in the text field; enter the deductible amount."
+    },
+    {
+      "id": "work_room_amount",
+      "form": "Anlage N",
+      "section": "Aufwendungen für ein häusliches Arbeitszimmer",
+      "line": "52",
+      "labelDe": "Aufwendungen für ein häusliches Arbeitszimmer",
+      "labelEn": "Work room costs or annual flat amount",
+      "unit": "EUR",
+      "verification": "verified"
+    },
+    {
+      "id": "home_office_days",
+      "form": "Anlage N",
+      "section": "Homeoffice-Pauschale – Tagespauschale",
+      "line": "53",
+      "labelDe": "Anzahl der Tage mit beruflicher Tätigkeit in der häuslichen Wohnung",
+      "labelEn": "Days working at home without visiting the first workplace",
+      "unit": "days",
+      "verification": "verified"
+    },
+    {
+      "id": "home_office_days_both",
+      "form": "Anlage N",
+      "section": "Homeoffice-Pauschale – Tagespauschale",
+      "line": "54",
+      "labelDe": "Tage in der Wohnung und an der ersten Tätigkeitsstätte (kein anderer Arbeitsplatz)",
+      "labelEn": "Days at home and at the first workplace when no other permanent workplace was available",
+      "unit": "days",
+      "verification": "verified"
+    },
+    {
+      "id": "union_dues_amount",
+      "form": "Anlage N",
+      "section": "Beiträge zu Berufsverbänden",
+      "line": null,
+      "labelDe": "Beiträge zu Berufsverbänden",
+      "labelEn": "Union / professional association fees",
+      "unit": "EUR",
+      "verification": "unverified",
+      "note": "The ELSTER 2025 instructions list this topic but the retrieved text gives no line number. Use the field label on screen."
+    },
+    {
+      "id": "donations_amount",
+      "form": "Anlage Sonderausgaben",
+      "section": "Spenden und Mitgliedsbeiträge für steuerbegünstigte Zwecke",
+      "line": "5",
+      "labelDe": "Spenden und Mitgliedsbeiträge zur Förderung steuerbegünstigter Zwecke",
+      "labelEn": "Donations and membership fees for tax-privileged purposes",
+      "unit": "EUR",
+      "verification": "verified",
+      "note": "ELSTER names lines 5 and 6 for this group; check the on-screen labels for which applies to the recipient."
+    }
+  ],
+  "mappings": [
+    {
+      "ruleId": "de.home_office.tagespauschale",
+      "outputs": [
+        {
+          "fieldId": "home_office_days",
+          "from": "facts.days",
+          "minus": "facts.daysAlsoAtFirstWorkplace"
+        },
+        {
+          "fieldId": "home_office_days_both",
+          "from": "facts.daysAlsoAtFirstWorkplace"
+        }
+      ]
+    },
+    {
+      "ruleId": "de.home_office.arbeitszimmer_jahrespauschale",
+      "outputs": [
+        {
+          "fieldId": "work_room_amount",
+          "from": "result.amount"
+        }
+      ]
+    },
+    {
+      "ruleId": "de.commute.entfernungspauschale.2025",
+      "outputs": [
+        {
+          "fieldId": "commute_days",
+          "from": "facts.workingDays"
+        },
+        {
+          "choose": {
+            "path": "facts.usesOwnOrProvidedCar",
+            "cases": [
+              {
+                "equals": true,
+                "fieldId": "commute_km_car"
+              },
+              {
+                "equals": false,
+                "fieldId": "commute_km_other"
+              }
+            ]
+          },
+          "from": "facts.oneWayKm"
+        }
+      ]
+    },
+    {
+      "ruleId": "de.commute.entfernungspauschale.2026",
+      "outputs": [
+        {
+          "fieldId": "commute_days",
+          "from": "facts.workingDays"
+        },
+        {
+          "choose": {
+            "path": "facts.usesOwnOrProvidedCar",
+            "cases": [
+              {
+                "equals": true,
+                "fieldId": "commute_km_car"
+              },
+              {
+                "equals": false,
+                "fieldId": "commute_km_other"
+              }
+            ]
+          },
+          "from": "facts.oneWayKm"
+        }
+      ]
+    },
+    {
+      "ruleId": "de.work_equipment.arbeitsmittel",
+      "outputs": [
+        {
+          "fieldId": "work_equipment_amount",
+          "from": "result.amount"
+        }
+      ]
+    },
+    {
+      "ruleId": "de.work_equipment.computer_nutzungsdauer",
+      "outputs": [],
+      "informational": "Supporting rule: computers and software are entered under work equipment."
+    },
+    {
+      "ruleId": "de.other.spenden",
+      "outputs": [
+        {
+          "fieldId": "donations_amount",
+          "from": "result.amount"
+        }
+      ]
+    },
+    {
+      "ruleId": "de.other.gewerkschaftsbeitraege.2026",
+      "outputs": [
+        {
+          "fieldId": "union_dues_amount",
+          "from": "result.amount"
+        }
+      ]
+    },
+    {
+      "ruleId": "de.general.arbeitnehmer_pauschbetrag",
+      "outputs": [],
+      "informational": "The tax office applies the standard allowance automatically; nothing to enter. Individual costs only help beyond it."
+    }
+  ]
+}

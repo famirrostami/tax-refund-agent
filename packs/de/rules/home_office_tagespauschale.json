@@ -1,0 +1,55 @@
+{
+  "id": "de.home_office.tagespauschale",
+  "category": "home_office",
+  "title": "Homeoffice-Tagespauschale (daily home-office flat rate)",
+  "tax_years": [
+    2025,
+    2026
+  ],
+  "summary": "6 EUR for each calendar day on which the work is mainly done in the home and no first place of work outside the home is visited, up to 1,260 EUR per year (210 days). It is not tied to having a separate room. Also allowed on days of away work or at the first place of work if no other permanent workplace is available.",
+  "keywords": [
+    "home office",
+    "homeoffice",
+    "work from home",
+    "tagespauschale",
+    "days",
+    "remote",
+    "pauschale",
+    "wohnung"
+  ],
+  "calc": {
+    "type": "per_unit_capped",
+    "unit": "day",
+    "rate": 6,
+    "cap_per_year": 1260,
+    "currency": "EUR",
+    "optional_split": "days also at first workplace (no other permanent workplace)"
+  },
+  "conditions": [
+    "Work is done wholly or predominantly in the home on that day and the first place of work is not visited",
+    "Days on which both the home and the first place of work were used count only if no other permanent workplace was available (separate line)",
+    "A work room is not required",
+    "Not allowed for periods in which a work-room (Arbeitszimmer) deduction is claimed, nor to the extent accommodation costs are claimed"
+  ],
+  "sources": [
+    {
+      "label": "§ 4 Abs. 5 Satz 1 Nr. 6c EStG",
+      "url": "https://www.gesetze-im-internet.de/estg/__4.html",
+      "kind": "statute"
+    },
+    {
+      "label": "§ 9 Abs. 5 EStG (applies Nr. 6b to 8a for employees)",
+      "url": "https://www.gesetze-im-internet.de/estg/__9.html",
+      "kind": "statute"
+    },
+    {
+      "label": "ELSTER Anleitung 2025, Anlage N, Zeilen 53 und 54",
+      "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025#c9718",
+      "kind": "official_guidance"
+    }
+  ],
+  "verification": "verified",
+  "notes": "ELSTER 2025: Zeile 53 = days working at home without visiting the first workplace; Zeile 54 = days at both home and first workplace when no other permanent workplace was available. Max 210 days / 1,260 EUR.",
+  "last_verified": "2026-11-02",
+  "open_questions": []
+}

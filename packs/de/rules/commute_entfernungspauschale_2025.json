@@ -1,0 +1,64 @@
+{
+  "id": "de.commute.entfernungspauschale.2025",
+  "category": "commute",
+  "title": "Entfernungspauschale (commuting allowance) for 2025",
+  "tax_years": [
+    2025
+  ],
+  "summary": "For each working day at the first place of work: 0.30 EUR per full kilometre for the first 20 km of the one-way distance and 0.38 EUR for each full km from the 21st km, up to 4,500 EUR per calendar year (higher only if an own or provided car is used).",
+  "keywords": [
+    "commute",
+    "pendlerpauschale",
+    "entfernungspauschale",
+    "kilometre",
+    "km",
+    "work",
+    "distance",
+    "fahrt",
+    "arbeitsweg",
+    "first place of work"
+  ],
+  "calc": {
+    "type": "per_km_tiered",
+    "tiers": [
+      {
+        "from_km": 1,
+        "to_km": 20,
+        "rate": 0.3
+      },
+      {
+        "from_km": 21,
+        "to_km": null,
+        "rate": 0.38
+      }
+    ],
+    "cap_per_year": 4500,
+    "currency": "EUR",
+    "cap_waived_if": "own or provided car is used"
+  },
+  "conditions": [
+    "Only the one-way distance counts, in full kilometres",
+    "Counts per working day on which the first place of work is visited"
+  ],
+  "sources": [
+    {
+      "label": "Steueränderungsgesetz 2025, BGBl. 2025 I Nr. 363 (23.12.2025)",
+      "url": "https://www.recht.bund.de/bgbl/1/2025/363/regelungstext.pdf?__blob=publicationFile&v=3",
+      "kind": "bgbl"
+    },
+    {
+      "label": "§ 9 Abs. 1 Satz 3 Nr. 4 EStG (current text shows the 2026 rate)",
+      "url": "https://www.gesetze-im-internet.de/estg/__9.html",
+      "kind": "statute"
+    },
+    {
+      "label": "ELSTER Anleitung zur Einkommensteuererklärung 2025, Anlage N, Zeilen 32 bis 47",
+      "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025#c9718",
+      "kind": "official_guidance"
+    }
+  ],
+  "verification": "verified",
+  "notes": "Confirmed by the official ELSTER 2025 instructions: 0.30 EUR per full km for the first 20 km and 0.38 EUR for each further full km, max 4,500 EUR unless an own or provided car is used. Only days on which the first place of work was visited count.",
+  "open_questions": [],
+  "last_verified": "2026-11-02"
+}

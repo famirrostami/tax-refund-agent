@@ -1,0 +1,36 @@
+{
+  "id": "de.other.gewerkschaftsbeitraege.2026",
+  "category": "other",
+  "title": "Union membership fees on top of the allowance (from 2026)",
+  "tax_years": [
+    2026
+  ],
+  "summary": "From 2026, payments of union membership fees that qualify as Werbungskosten (§ 9 Abs. 1 Satz 3 Nr. 3 EStG) are taken into account in addition to the Arbeitnehmer-Pauschbetrag.",
+  "keywords": [
+    "union",
+    "gewerkschaft",
+    "membership",
+    "fees",
+    "beitrag",
+    "werbungskosten",
+    "verdi",
+    "ig metall"
+  ],
+  "calc": {
+    "type": "additional_to_allowance"
+  },
+  "conditions": [
+    "Applies from the 2026 tax year (law in force 1 January 2026)"
+  ],
+  "sources": [
+    {
+      "label": "Steueränderungsgesetz 2025, BGBl. 2025 I Nr. 363 (23.12.2025)",
+      "url": "https://www.recht.bund.de/bgbl/1/2025/363/regelungstext.pdf?__blob=publicationFile&v=3",
+      "kind": "bgbl"
+    }
+  ],
+  "verification": "verified",
+  "notes": "Art. 2 Nr. 4 and Art. 12 Abs. 2 of the Steueränderungsgesetz 2025.",
+  "last_verified": "2026-11-02",
+  "open_questions": []
+}

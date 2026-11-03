@@ -1,0 +1,42 @@
+{
+  "id": "de.other.spenden",
+  "category": "other",
+  "title": "Donations (Spenden) limit",
+  "tax_years": [
+    2025,
+    2026
+  ],
+  "summary": "Donations to eligible recipients for tax-privileged purposes (§§ 52 to 54 AO) are deductible up to 20 percent of the total amount of income (Gesamtbetrag der Einkünfte).",
+  "keywords": [
+    "donation",
+    "spende",
+    "charity",
+    "gemeinnützig",
+    "zuwendung",
+    "donate"
+  ],
+  "calc": {
+    "type": "percent_cap",
+    "percent_of": "Gesamtbetrag der Einkünfte",
+    "percent": 20
+  },
+  "conditions": [
+    "Recipient is a domestic or EU/EEA public body, or a tax-exempt body under § 5 Abs. 1 Nr. 9 KStG, or a comparable EU/EEA body"
+  ],
+  "sources": [
+    {
+      "label": "§ 10b Abs. 1 EStG",
+      "url": "https://www.gesetze-im-internet.de/estg/__10b.html",
+      "kind": "statute"
+    },
+    {
+      "label": "ELSTER Anleitung 2025, Anlage Sonderausgaben, Zeilen 5 bis 12",
+      "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025#c0817",
+      "kind": "official_guidance"
+    }
+  ],
+  "verification": "verified",
+  "notes": "ELSTER 2025: donations and membership fees for tax-privileged purposes (Zeilen 5 and 6) count up to 20 percent of the Gesamtbetrag der Einkünfte. Not deductible, for example: membership fees for sports, leisure-type cultural activities, local heritage. Donations to political parties and voter associations are a separate tax reduction (Zeilen 7 and 8), not covered here.",
+  "last_verified": "2026-11-02",
+  "open_questions": []
+}

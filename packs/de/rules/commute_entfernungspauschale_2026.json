@@ -1,0 +1,60 @@
+{
+  "id": "de.commute.entfernungspauschale.2026",
+  "category": "commute",
+  "title": "Entfernungspauschale (commuting allowance) from 2026",
+  "tax_years": [
+    2026
+  ],
+  "summary": "For each working day on which the employee goes to the first place of work (erste Tätigkeitsstätte), 0.38 EUR per full kilometre of the one-way distance between home and workplace, from the first kilometre, up to 4,500 EUR per calendar year. A higher amount applies only if an own or provided car is used. Not for flights or tax-free collective transport.",
+  "keywords": [
+    "commute",
+    "pendlerpauschale",
+    "entfernungspauschale",
+    "kilometre",
+    "km",
+    "work",
+    "distance",
+    "fahrt",
+    "arbeitsweg",
+    "first place of work"
+  ],
+  "calc": {
+    "type": "per_km_tiered",
+    "tiers": [
+      {
+        "from_km": 1,
+        "to_km": null,
+        "rate": 0.38
+      }
+    ],
+    "cap_per_year": 4500,
+    "currency": "EUR",
+    "cap_waived_if": "own or provided car is used"
+  },
+  "conditions": [
+    "Only the one-way distance counts, in full kilometres",
+    "Counts per working day on which the first place of work is visited",
+    "Does not apply to flight routes or routes with tax-free collective transport (§ 3 Nr. 32 EStG)"
+  ],
+  "sources": [
+    {
+      "label": "§ 9 Abs. 1 Satz 3 Nr. 4 EStG",
+      "url": "https://www.gesetze-im-internet.de/estg/__9.html",
+      "kind": "statute"
+    },
+    {
+      "label": "Steueränderungsgesetz 2025, BGBl. 2025 I Nr. 363 (23.12.2025)",
+      "url": "https://www.recht.bund.de/bgbl/1/2025/363/regelungstext.pdf?__blob=publicationFile&v=3",
+      "kind": "bgbl"
+    },
+    {
+      "label": "BMF Lohnsteuer-Handbuch 2026, Anhang 14 (cited by search results; page not retrievable)",
+      "url": "https://ao.bundesfinanzministerium.de/lsth/2026/B-Anhaenge/Anhang-14/inhalt.html",
+      "kind": "bmf"
+    }
+  ],
+  "verification": "verified",
+  "notes": "0.38 EUR from the first km applies from 1 January 2026 (Art. 2 and Art. 12 Abs. 2 of the amending law). Political proposals to change the rate again are not law and are not encoded here.",
+  "last_verified": "2026-11-02",
+  "open_questions": []
+}

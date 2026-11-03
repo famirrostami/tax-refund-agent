@@ -1,0 +1,54 @@
+{
+  "id": "de.work_equipment.computer_nutzungsdauer",
+  "category": "work_equipment",
+  "title": "One-year useful life for computers and software",
+  "tax_years": [
+    2025,
+    2026
+  ],
+  "summary": "For computer hardware and operating/application software used for data entry and processing, a useful life of one year may be assumed (BMF letter of 22 February 2022). This allows the full cost to be depreciated in the year of purchase, even above 800 EUR. It is a permitted option, not an obligation, and not a special depreciation method.",
+  "keywords": [
+    "laptop",
+    "computer",
+    "pc",
+    "notebook",
+    "software",
+    "monitor",
+    "keyboard",
+    "useful life",
+    "nutzungsdauer",
+    "depreciation",
+    "afa",
+    "docking",
+    "printer"
+  ],
+  "calc": {
+    "type": "useful_life",
+    "years": 1
+  },
+  "conditions": [
+    "The taxpayer may choose a longer useful life",
+    "Covers computer hardware and software for data entry and processing (see the BMF letter for the item list)"
+  ],
+  "sources": [
+    {
+      "label": "BMF letter 22.02.2022, BStBl I S. 187, via EStH 2022 Anhang 1 V",
+      "url": "https://esth.bundesfinanzministerium.de/esth/2022/C-Anhaenge/Anhang-01/V/anhang-1-V.html",
+      "kind": "bmf"
+    },
+    {
+      "label": "EStH 2025 Anhang 1 (letter still listed)",
+      "url": "https://esth.bundesfinanzministerium.de/esth/2025/B-Anhaenge/Anhang-01/inhalt.html",
+      "kind": "bmf"
+    },
+    {
+      "label": "ELSTER Anleitung 2025, Anlage N, Zeilen 49 bis 51 (cites BMF letter of 22.02.2022, BStBl I S. 187)",
+      "url": "https://www.elster.de/eportal/helpGlobal?themaGlobal=help_est_ufa_10_2025#c9718",
+      "kind": "official_guidance"
+    }
+  ],
+  "verification": "verified",
+  "notes": "ELSTER 2025 states that the acquisition cost of computer hardware and software can be deducted in full in the year of purchase and cites the BMF letter of 22 February 2022.",
+  "open_questions": [],
+  "last_verified": "2026-11-02"
+}
